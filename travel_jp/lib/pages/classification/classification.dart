@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:travel_jp/Common/service/http_classification_request.dart';
 import 'package:travel_jp/model/classification_data_model_entity.dart';
@@ -16,8 +15,8 @@ class HYClassificationPage extends StatelessWidget {
       ),
       body: FutureBuilder(
         future: HYClassificationRequest.classificationRequest(),
-        builder: (context, snapshot){
-          switch (snapshot.connectionState){
+        builder: (context, snapshot) {
+          switch (snapshot.connectionState) {
             case ConnectionState.waiting:
             case ConnectionState.none:
               {
@@ -26,40 +25,50 @@ class HYClassificationPage extends StatelessWidget {
               break;
             default:
               {
-                if(snapshot.hasError){
+                if (snapshot.hasError) {
                   return const Center(
                     child: Text("获取数据失败"),
                   );
-                }else{
-                  List<HYClassificationDataModelEntity>list = snapshot.data as List<HYClassificationDataModelEntity>;
+                } else {
+                  List<HYClassificationDataModelEntity> list =
+                      snapshot.data as List<HYClassificationDataModelEntity>;
                   return ListView.builder(
                       itemCount: list.length,
-                      itemBuilder: (context,index){
+                      itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: GestureDetector(
-                            onTap: (){
-                              Navigator.pushNamed(context, HYClassificationVideosPage.routerName,arguments:list[index]);
+                            onTap: () {
+                              Navigator.pushNamed(context,
+                                  HYClassificationVideosPage.routerName,
+                                  arguments: list[index]);
                             },
                             child: Image.network(
-                                list[index].backImg,
+                              list[index].backImg,
                               fit: BoxFit.fitHeight,
-                              loadingBuilder:(context, child, loadingProgress){
-                                  if(loadingProgress ==null){
-                                    return child;
-                                  }
-                                  return Container(
-                                    alignment: Alignment.center,
-                                    child: CircularProgressIndicator(
-                                      value: loadingProgress.expectedTotalBytes!=null?loadingProgress.cumulativeBytesLoaded/loadingProgress.expectedTotalBytes!:null),
-                                    );
+                              loadingBuilder:
+                                  (context, child, loadingProgress) {
+                                if (loadingProgress == null) {
+                                  return child;
+                                }
+                                return Container(
+                                  alignment: Alignment.center,
+                                  child: CircularProgressIndicator(
+                                      value:
+                                          loadingProgress.expectedTotalBytes !=
+                                                  null
+                                              ? loadingProgress
+                                                      .cumulativeBytesLoaded /
+                                                  loadingProgress
+                                                      .expectedTotalBytes!
+                                              : null),
+                                );
                               },
                             ),
                           ),
                         );
                       });
                 }
-
               }
           }
         },
