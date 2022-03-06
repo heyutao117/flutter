@@ -1,9 +1,8 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:travel_jp/pages/classification/classification.dart';
 import 'package:travel_jp/pages/home/home.dart';
 import 'package:travel_jp/pages/knowledge/knowledge.dart';
+
 import '../../pages/my/my.dart';
 import '../ui/bottombar_item.dart';
 
@@ -14,9 +13,9 @@ List<HYBottomNavigationBarItem> items = [
   HYBottomNavigationBarItem("tab_user", "我的"),
 ];
 
-List<Widget> pages =[
-  HYHomePage(),
-  HYClassificationPage(),
-  HYKnowledgePage(),
-  HYMyPage()
+List<Widget> pages = [
+  const HYHomePage(),
+  const HYClassificationPage(),
+  const HYKnowledgePage(),
+  const HYMyPage()
 ];
