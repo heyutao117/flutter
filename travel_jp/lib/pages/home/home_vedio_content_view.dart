@@ -23,12 +23,6 @@ class _HYVideoContentViewState extends State<HYVideoContentView> {
   @override
   void initState() {
     super.initState();
-    // _controller = VideoPlayerController.network(
-    //     'http://newshipin.qn.youyizhidao.com/yy_ribenlvyou_${widget.vid}.mp4');
-    // _controller.addListener(() {});
-    // _controller.initialize().then((value) {});
-    // _chewieController = ChewieController(
-    //     videoPlayerController: _controller, autoPlay: true, looping: false);
   }
 
   @override
@@ -127,7 +121,14 @@ class _HYVideoContentViewState extends State<HYVideoContentView> {
             const SizedBox(
               width: 30,
             ),
-            Expanded(child: Text(vlist.title)),
+            Expanded(
+                child: Text(
+              vlist.title,
+              maxLines: 3,
+            )),
+            const SizedBox(
+              width: 20,
+            ),
           ],
         ),
       ),
