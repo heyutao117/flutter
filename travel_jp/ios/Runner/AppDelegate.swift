@@ -8,6 +8,8 @@ import Flutter
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
+    /// 注册
+    FlutterNativePlugin.plugin.register(messenger: (self.window.rootViewController as? FlutterViewController)?.binaryMessenger)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }

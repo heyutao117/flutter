@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:travel_jp/Common/routers/routers.dart';
@@ -9,11 +8,11 @@ class HYMyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360,690),
+      designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (){
-        return  MaterialApp(
+      builder: (BuildContext context, Widget? widget) {
+        return MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
             primarySwatch: Colors.blue,
