@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import FlexLib
 
-class BaseViewController: UIViewController {
-
+class BaseViewController: FlexBaseVC {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let leftBtn = UIButton.init()
+        leftBtn.setImage(UIImage.init(named: "back_full"), for: .normal)
+        leftBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: leftBtn)
+        
         self.view.backgroundColor = UIColor.white
-      
         if #available(iOS 13.0, *) {
             let appprerance = UINavigationBarAppearance.init()
             appprerance.backgroundColor = "0x1E90FF".uicolor()
@@ -25,4 +30,8 @@ class BaseViewController: UIViewController {
         }
      
     }
+    @objc func backClick()  {
+        self.navigationController?.dismiss(animated: false, completion: nil)
+    }
+    
 }

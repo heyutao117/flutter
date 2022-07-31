@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UIView
+    layout="
+    flexDirection: margin:8"
+    attr="bgColor:white">
+    <UIView
+        layout="flex:1">
+        <UIView layout="flexDirection:row,marginTop:4">
+            <UILabel name="author" attr="fontSize:16,color:#999999,text:沸点小助手,linesNum:1"/>
+            <UIView layout="width:1,height:15,marginLeft:5,marginTop:3" attr="bgColor:#999999"/>
+            <UILabel name="time"
+                layout="marginLeft:5"
+                attr="fontSize:16,color:#999999,text:9小时前,linesNum:1"/>
+        </UIView>
+        <UIView layout="flexDirection:row,flex:1">
+            <UIView layout="flex:1">
+                <UILabel name="name"
+                    layout="marginTop:5"
+                    attr="fontSize:18,color:black,text:2022年的React生态,linesNum:1"/>
+                <UILabel name="name"
+                        layout="marginTop:5"
+                        attr="fontSize:15,color:#999999,text:2022年的React生态2022年的React生态2022年的React生态2022年的React生态2022年的React生态2022年的React生态2022年的React生态2022年的React生态,linesNum:0"/>
+                <UIView
+                    layout="flexDirection:row,marginTop:3,alignItems:center,justifyContent:flex-start">
+                    <UIImageView layout="width:10,height:10"  attr="source:view.jpeg"/>
+                    <UILabel name="name"
+                       attr="fontSize:14,color:#333333,text:10.4W,linesNum:1"/>
+                    <UIView layout="width:5"/>
+                    <UIImageView layout="width:10,height:10"  attr="source:dianzan.jpeg"/>
+                    <UILabel name="type"  attr="fontSize:14,color:#999999,text:1761,linesNum:1"/>
+                    <UIView layout="width:5"/>
+                    <UIImageView layout="width:10,height:10"  attr="source:view.jpeg"/>
+                    <UILabel name="type" attr="fontSize:14,color:#999999,text:263,linesNum:1"/>
+                   
+                </UIView>
+            </UIView>
+            <UIView layout="alignItems:center,flexDirection:row">
+                <UIImageView layout="width:100,height:80"  attr="source:222.jpeg"/>
+            </UIView>
+          
+        </UIView>
+    </UIView>
+</UIView> 

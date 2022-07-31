@@ -6,20 +6,42 @@
 //
 
 import UIKit
+import FlexLib
 
-class RootViewController: BaseViewController {
-
+@objc(RootViewController)
+class RootViewController: BaseViewController{
+    @objc var _table : UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我是原生页面"
-        let leftBtn = UIButton.init()
-        leftBtn.setImage(UIImage.init(named: "back_full"), for: .normal)
-        leftBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: leftBtn)
+        _table.delegate = self;
+        _table.dataSource = self
+      
     }
     
-    @objc func backClick()  {
-        self.navigationController?.dismiss(animated: false, completion: nil)
+  
+}
+
+extension RootViewController:UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 100;
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier : String = "TestTableCellIdentifier"
+        
+        var cell : RootTableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifier) as? RootTableViewCell
+        
+        if (cell == nil) {
+            cell = RootTableViewCell(flex:nil,reuseIdentifier:identifier)
+        }
+        
+        return cell!
+    }
+    
     
 }
+
+
