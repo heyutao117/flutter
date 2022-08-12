@@ -19,8 +19,6 @@ class RootViewController: BaseViewController{
         _table.dataSource = self
       
     }
-    
-  
 }
 
 extension RootViewController:UITableViewDelegate,UITableViewDataSource {
@@ -41,6 +39,10 @@ extension RootViewController:UITableViewDelegate,UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let flutterVC = FlutterNewViewController(project: nil, initialRoute: "/knowledgePage", nibName: nil, bundle: nil)
+        self.navigationController?.pushViewController(flutterVC, animated: false)
+    }
     
 }
 

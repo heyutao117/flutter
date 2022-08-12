@@ -5,7 +5,7 @@
     attr="bgColor:white">
     <UIView
         layout="flex:1">
-        <UIView layout="flexDirection:row,marginTop:4">
+        <UIView layout="flexDirection:row,marginTop:8">
             <UILabel name="author" attr="fontSize:16,color:#999999,text:沸点小助手,linesNum:1"/>
             <UIView layout="width:1,height:15,marginLeft:5,marginTop:3" attr="bgColor:#999999"/>
             <UILabel name="time"
