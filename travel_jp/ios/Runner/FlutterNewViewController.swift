@@ -19,8 +19,8 @@ class FlutterNewViewController: FlutterViewController {
     override var splashScreenView: UIView {
         get{
             let view = UIView.init()
-            view.backgroundColor = UIColor.white
-            view.alpha = 0.5;
+            view.backgroundColor = UIColor.red
+            view.frame = UIScreen.main.bounds
             return view
         }
         set{

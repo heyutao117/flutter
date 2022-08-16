@@ -32,7 +32,8 @@ target 'Runner' do
   use_modular_headers!
   pod 'FlexLib'
   pod 'Alamofire'
-  pod  'SwiftyJSON'
+  pod 'SwiftyJSON'
+  pod 'Toast-Swift'
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
