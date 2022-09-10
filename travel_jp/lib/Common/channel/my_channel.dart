@@ -20,8 +20,6 @@ class HYChannel {
   static void invokeMethod<T>(String method, Function(dynamic result) callBack,
       [dynamic arguments]) async {
     dynamic result = await channel.invokeMethod(method, arguments);
-    if (callBack != null) {
-      callBack(result);
-    }
+    callBack(result);
   }
 }
