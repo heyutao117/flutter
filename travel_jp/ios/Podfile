@@ -34,6 +34,7 @@ target 'Runner' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Toast-Swift'
+  pod 'UniMPSDK'
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 

@@ -14,6 +14,15 @@ PODS:
   - SwiftyJSON (5.0.1)
   - Toast (4.0.0)
   - Toast-Swift (5.0.1)
+  - UniMPSDK (2.9.8):
+    - UniMPSDK/Core (= 2.9.8)
+  - UniMPSDK/Core (2.9.8):
+    - UniMPSDK/Core/Headers (= 2.9.8)
+    - UniMPSDK/Core/Libs (= 2.9.8)
+  - UniMPSDK/Core/Headers (2.9.8):
+    - UniMPSDK/Core/Headers/weexHeader (= 2.9.8)
+  - UniMPSDK/Core/Headers/weexHeader (2.9.8)
+  - UniMPSDK/Core/Libs (2.9.8)
   - video_player_avfoundation (0.0.1):
     - Flutter
   - wakelock (0.0.1):
@@ -29,6 +38,7 @@ DEPENDENCIES:
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - SwiftyJSON
   - Toast-Swift
+  - UniMPSDK
   - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/ios`)
   - wakelock (from `.symlinks/plugins/wakelock/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
@@ -40,6 +50,7 @@ SPEC REPOS:
     - SwiftyJSON
     - Toast
     - Toast-Swift
+    - UniMPSDK
     - Yoga
 
 EXTERNAL SOURCES:
@@ -62,11 +73,12 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  UniMPSDK: 91fd60163ae991610a06a030721323bf3189197b
   video_player_avfoundation: e489aac24ef5cf7af82702979ed16f2a5ef84cff
   wakelock: d0fc7c864128eac40eba1617cb5264d9c940b46f
   webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
 
-PODFILE CHECKSUM: b5b97abee012ccbdb53867ff56b46ebbde17bc98
+PODFILE CHECKSUM: b865923fdec7cd0102b34550b228da4257d6758e
 
 COCOAPODS: 1.9.1
